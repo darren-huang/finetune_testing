@@ -26,12 +26,13 @@ if __name__ == '__main__':
 
     # delete / create folders
     print("deleting and then creating folders")
-    shutil.rmtree(train)
-    shutil.rmtree(test)
-    if not os._exists(train):
-        os.mkdir(train)
-    if not os._exists(test):
-        os.mkdir(test)
+    
+    if os._exists(train):
+        shutil.rmtree(train)
+    if os._exists(test):
+        shutil.rmtree(test)
+    os.mkdir(train)
+    os.mkdir(test)
 
     # iter over categories/labels
     for label in os.listdir(data_dir):

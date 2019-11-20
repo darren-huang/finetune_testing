@@ -15,7 +15,7 @@ import shutil
 import random
 from os import path
 
-name_set = "lobi"
+name_set = "caltech101"
 
 root_data_loc = "data/" + name_set
 data_dir = "data/" + name_set + "_all"

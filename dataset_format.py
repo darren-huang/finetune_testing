@@ -27,11 +27,11 @@ if __name__ == '__main__':
 
     # delete / create folders
     print("deleting and then creating folders")
-    if not os._exists(root_data_loc): # root must exist
+    if not os.path.exists(root_data_loc): # root must exist
         os.mkdir(root_data_loc)
-    if os._exists(train): # rmv old
+    if os.path.exists(train): # rmv old
         shutil.rmtree(train)
-    if os._exists(test):
+    if os.path.exists(test):
         shutil.rmtree(test)
     os.mkdir(train)
     os.mkdir(test)

@@ -292,7 +292,7 @@ def validate(val_loader, model, criterion):
                    i, len(val_loader), batch_time=batch_time, loss=losses,
                    top1=top1, top5=top5))
 
-    print(' * Prec@1 {top1.avg:.3f} Prec@5 {top5.avg:.3f}'
+    print(' * Prec@1 {top1.avg:.3f} Prec@1 {top5.avg:.3f}'
           .format(top1=top1, top5=top5))
 
     return top1.avg

@@ -17,6 +17,7 @@ from os import path
 
 name_set = "lobi"
 
+root_data_loc = "data/" + name_set
 data_dir = "data/" + name_set + "_all"
 train = "data/" + name_set + "/train"
 test = "data/" + name_set + "/test"
@@ -26,8 +27,9 @@ if __name__ == '__main__':
 
     # delete / create folders
     print("deleting and then creating folders")
-    
-    if os._exists(train):
+    if not os._exists(root_data_loc): # root must exist
+        os.mkdir(root_data_loc)
+    if os._exists(train): # rmv old
         shutil.rmtree(train)
     if os._exists(test):
         shutil.rmtree(test)

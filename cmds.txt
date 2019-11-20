@@ -1,3 +1,2 @@
-CUDA_VISIBLE_DEVICES=3 python main2.py -a resnet18 --lr 0.1 -e --pretrained
-
 CUDA_VISIBLE_DEVICES=3 python3.7 main2.py -a resnet18 --lr 0.1 --pretrained data/caltech101
+CUDA_VISIBLE_DEVICES=3 python3.7 main2.py -a resnet18 --lr 0.1 --pretrained data/lobi

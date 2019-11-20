@@ -15,9 +15,11 @@ import shutil
 import random
 from os import path
 
-data_dir = "data/caltech101/101_ObjectCategories"
-train = "data/caltech101/train"
-test = "data/caltech101/test"
+name_set = "lobi"
+
+data_dir = "data/" + name_set + "_all"
+train = "data/" + name_set + "/train"
+test = "data/" + name_set + "/test"
 train_frac = 0.8
 
 if __name__ == '__main__':
